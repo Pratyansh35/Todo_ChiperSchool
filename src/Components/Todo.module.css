@@ -1,0 +1,57 @@
+.todo {
+  border: 2px solid #a19090;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.todo:hover {
+  transform: scale(1.03);
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  background-color: #9f7b7b;
+  color: #232323;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.button:hover {
+  background-color: #3c2626;
+  color: #333;
+  border: 1px solid #dcdcdc;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.todoCheckbox {
+  width: 20px;
+  height: 20px;
+  accent-color: green;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}

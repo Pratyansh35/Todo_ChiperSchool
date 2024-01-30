@@ -1,15 +1,13 @@
 /* eslint-disable react/prop-types */
 
-
+import { Link } from "react-router-dom";
 import AddTodoForm from "./../Components/AddTodoForm";
 import TodoList from "./../Components/TodoList";
 import styles from "./../App.Module.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-function HomePage({todos,setTodos}) {
- 
+function HomePage({ todos, setTodos }) {
   function addTodo(newTodo) {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   }
@@ -38,41 +36,46 @@ function HomePage({todos,setTodos}) {
       })
     );
   }
+
   return (
     <>
-    <ToastContainer
-      position="bottom-center"
-      autoClose={2000}
-      hideProgressBar={true}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="dark"
-    />
-    <div className={styles.App}>
-      <h1 className={styles.heading}>ToDo App</h1>
-      <AddTodoForm addTodo={addTodo} />
-      <TodoList
-        todos={todos}
-        deleteTodo={deleteTodo}
-        toggleCompleted={toggleCompleted}
-        updateTitle={updateTitle}
+      <ToastContainer
+        position="bottom-center"
+        autoClose={2000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
       />
-      {todos.length > 0 ? (
-        <button
-          className={styles.clearAllTodosBtn}
-          onClick={() => {
-            setTodos([]);
-          }}
-        >
-          Clear All Todos
-        </button>
-      ) : null}
-    </div>
-  </>
+      <div className={styles.App}>
+        <h1 className={styles.heading}>ToDo App</h1>
+        <AddTodoForm addTodo={addTodo} />
+        <TodoList
+          todos={todos}
+          deleteTodo={deleteTodo}
+          toggleCompleted={toggleCompleted}
+          updateTitle={updateTitle}
+        />
+        {todos.length > 0 ? (
+          <button
+            className={styles.clearAllTodosBtn}
+            onClick={() => {
+              setTodos([]);
+            }}
+          >
+            Clear All Todos
+          </button>
+        ) : null}
+        <Link to="/completed" className={styles.completedButton}>
+          Completed
+        </Link>
+
+      </div>
+    </>
   );
 }
 

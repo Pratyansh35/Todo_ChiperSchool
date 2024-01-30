@@ -14,3 +14,19 @@
   background-color: #43bb4f;
   color: #f8f8f8;
 }
+
+.completedButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.completedButton:hover {
+  background-color: #45a049;
+}

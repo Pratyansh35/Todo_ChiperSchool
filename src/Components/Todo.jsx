@@ -47,4 +47,9 @@ function Todo({ todo, deleteTodo, toggleCompleted, updateTitle }) {
   );
 }
 
+// edit todo
+// priority
+// sort
+
+// crud
 export default Todo;

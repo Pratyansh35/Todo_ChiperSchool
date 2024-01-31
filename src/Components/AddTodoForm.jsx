@@ -6,6 +6,7 @@ function AddTodoForm({ addTodo }) {
   const [todoTitle, setTodoTitle] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
+    
     if (todoTitle.trim().length === 0) {
       setTodoTitle("");
       toast.error("type something in input field");
